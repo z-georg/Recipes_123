@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipies MVC</title>
+    <link rel="stylesheet" href="assets/css/recipesStyle.css" />
+
+
+</head>
+<body>
+
+    <nav>
+        <ul><img id = "logo" src="assets/js/images/logo.png" alt="logo"></ul>
+        <ul class="navLink"><a   href="#AllRecepies">Всички рецепти</a></ul>
+        <ul  class="navLink"><a  href="#Favourites">Любими рецепти</a></ul>
+        <ul  class="navLink"><a   href="#Create">Създрай рецепта</a></ul>
+        <ul  class="navLink"><a   href="#MyProfile">Моят профил</a></ul>
+        <ul ><img id="userphoto" src = "assets/js/images/guest.png"></ul>
+    </nav>
+
+
+<main>
+  
+
+ 
+        <div id="Error">Няма такава страница!</div>
+        <div id="AllRecepies">
+            <h1>Всички рецепти</h1>
+
+
+            <div id="search">
+                <input type="text" id="search-field" placeholder="Search by name">
+            </div>
+
+            <div id ="filter">
+            
+
+                <label for="ingredients">Choose an ingredient:</label>
+                <select name="ingredients" id="ingredients">
+                </select>
+                <div id="filterResults"></div>
+                          </div>
+
+            <div>
+            <button id="clearFilterButton">Clear filter</button>
+            </div>
+            <div id="searchResults"></div>
+            
+
+    
+        </div>
+
+
+        <div id="Favourites"><h1>Любими рецепти</h1>
+        </div>
+
+        <div id="Create">
+            <form method="POST">
+
+                <label for="fname">Наименование: </label><br>
+                <input type="text" id="fname" name="fname" ><br>
+
+                <label for="fname">Съставки: </label><br>
+                <input type="textarea" id="fingredients" name="fingredients" ><br>
+
+                <label for="lname">Линк към подробна рецепта: </label><br>
+                <input type="text" id="flink" name="flink" ><br><br>
+
+                <label for="fname">Снимка: </label><br><br>
+                <input type="file" id="fimage" name="fimage" accept="image/jpeg, image/png, image/jpg"><br><br><br>
+                <input type="button" value="Submit" id="submitToCreate"><br><br>
+
+            </form>
+        </div>
+        <div id="MyProfile">
+
+            <form method="POST">
+
+                <label for="userFormName">Име: </label><br>
+                <input type="text" id="userFormName" name="userFormName" ><br>
+
+                <label for="userFormAge">Години: </label><br>
+                <input type="text" id="userFormAge" name="userFormAge" ><br>
+
+                <label for="userFormAdres">Адрес: </label><br>
+                <input type="text" id="userFormAdres" name="userFormAdres" ><br><br>
+
+                <label for="userFormImage">Снимка: </label><br><br>
+                <input type="file" id="userFormImage" name="userFormImage" accept="image/jpeg, image/png, image/jpg"><br><br><br>
+                <input type="button" value="Submit" id="userSubmitButton"><br><br>
+
+            </form>
+
+            <div id="myProfileTable"></div>
+        </div>
+       
+    
+
+    <div id="results"></div>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+    <ul>Website created by: </ul>
+    <ul>All rights reserved</ul>
+</footer>
+
+
+<script src="assets/js/rawRecipes.js"></script>
+<script src="model.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+<script src="controller.js"></script>
+<script src="assets/js/images"></script>
+
+
+</body>
+</html>
